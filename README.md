@@ -17,7 +17,7 @@ This web app generates strong, random passwords up to 30 characters to enhance y
 
 ## Screenshot  
 ![Secure Password Generator v1](./Pg_v1.png)  
-
+version 1.00
 ---
 
 ## How to Use  
