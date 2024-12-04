@@ -83,7 +83,7 @@ generateBtn.addEventListener("click", generatePassword);
 //button Sound 
 
 function sound(){
-    var snd = new Audio('click.mp3')//wav is also supported
+    var snd = new Audio('audio/click.mp3')//wav is also supported
     snd.play()//plays the sound
 }
 

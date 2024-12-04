@@ -70,7 +70,7 @@ body{
     margin-left: -10px;
 }
 
-/*Setting buttom code*/
+/*Setting button code*/
 .setting-btn span {
     color: #ddeefb;
     position:relative;
@@ -172,7 +172,7 @@ span:hover {
     height: 15px;
     
 }
-/** password lenght color*/
+/** password length color*/
 input[type=range] {
     margin: auto;
     outline: none;
