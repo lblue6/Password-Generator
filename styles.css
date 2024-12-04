@@ -11,24 +11,89 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #5492f6
+    background-color: #6d6e6e;
 }
-.container{
-    width: 450px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+.container {
+    width: 425px;
+    background-image: linear-gradient(195deg, #ddeefb, rgb(233, 232, 232));
+    -o-border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    height: 900px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    border-radius: 12px;
+}
+.head {
+    width: 425px;
+    background: linear-gradient(180deg, #2b5a9c, #0d57bf);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.toggle-btn span {
+
+    color: #ddeefb;
+    position:relative;
+    left: 370px;
+    top: 37px;
+    cursor:pointer;
+    
+
+}
+/*search img code*/
+.side-container button img{
+    width: 17px;
+    float: center;
+}
+.search-limited {
+    width: calc(100% - 20px);
+    max-width: 20em;
+    overflow: hidden;
+}
+.side-container button{
+    border: 0;
+    border-radius: 50%;
+    width: 35px;
+    height: 34px;
+    background: #0d57bf;
+    cursor: pointer;
+    float: right;
+    position: relative;
+    left: 47px;
+}
+ /*sideSetting container*/
+
+.pass-limited{
+    width: calc(100% - 20px);
+    max-width: 20em;
+    overflow: hidden;
+    margin-left: -10px;
+}
+
+/*Setting buttom code*/
+.setting-btn span {
+    color: #ddeefb;
+    position:relative;
+    left: 30px;
+    top: 6px;
+    cursor: pointer;
+    
+}
+span:hover {
+    color: #7e9cbe;
 }
 .container h2{
     font-weight: 600;
-    font-size: 1.60rem;
-    padding: 1rem 1.75rem;
-    border-bottom: 1px solid #d4dbe5;
+    font-size: 1.61rem;
+    padding: 0.5rem 0rem 1rem 0.5rem;
+    border-bottom: 1px solid #040608;
+    margin-top: -40px;
     text-align: center;
+    color: #faf8f6;
 }
 
 .wrapper{
-    margin: 1.25rem 1.75rem;
+    margin: 1.10rem 1.90rem;
 }
 .wrapper .input-box{
     position: relative;
@@ -38,25 +103,25 @@ body{
     height: 43px;
     color: #000;
     background: none;
-    font-size: 1.06rem;
-    font-weight: 500;
+    font-size: 1.00rem;
+    font-weight: 400;
     border-radius: 4px;
-    letter-spacing: 1.4px;
+    letter-spacing: 1.2px;
     border: 1px solid #aaa;
-    padding: 0 2.85rem 0 1rem;
+    padding: 0 1.85rem 0 0.5rem;
     
 }
 
 .input-box span{
     position: absolute;
-    right: 13px;
+    right: 1%;
     cursor: pointer;
-    line-height: 53px;
-    color: #707070;
+    line-height: 40px;
+    color: #2e5894;
 
 }
 .input-box span:hover{
-    color: #4285f4! important;
+    color: #7e9cbe;
 }
 .wrapper .pass-indicator{
     width: 100%;
@@ -99,25 +164,53 @@ body{
 .pass-length .details{
     display: flex;
     justify-content: space-between;
+    
 }
 
 .pass-length input{
     width: 100%;
-    height: 15px
+    height: 15px;
+    
 }
+/** password lenght color*/
+input[type=range] {
+    margin: auto;
+    outline: none;
+    padding: 0;
+    width: 370px;
+    height: 2px;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cadbf3), color-stop(200%, #4d92c6));
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+input[type="range"]::-moz-range-progress {
+    background-color: #2e5894;
+}
+
 .pass-settings .options{
-    display: flex;
-    list-style: none;
-    flex-wrap:  wrap;
-    margin-top: 1rem;
+    display:inline;
+    list-style:none;
+    flex-wrap:wrap;
+    margin-top: 2rem;
+    align-items: center;
 
 }
-.pass-settings .options .option{
-    display:center;
-    align-items: center;
-    margin-bottom: 1rem;
-    width: calc(100% / 2);
+.pass-settings .options span {
+    font-size: 18px;
+    font-family: sans-serif  ;
 }
+
+.pass-settings .options .option{
+    display: grid;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: calc(100% / 2);
+    
+}
+
 .options .option:first-child{
     pointer-events: none;
 }
@@ -135,17 +228,72 @@ body{
     color: rgb(4, 4, 4);
     padding-left: 0.63rem;
 }
-.wrapper .generate-btn{
+.option span {  /* letter position */
+    left: 36px;
+    position: relative;
+    top: 16px;
+    
+}
+.wrapper .generate-btn{ /* password generate button*/
     width: 100%;
     color: #fff;
     border:none;
     outline: none;
     cursor: pointer;
+    background-image:linear-gradient(195deg, #1d73eb, #2e5894);
     font-size: 1.06rem;
     padding: 0.94rem 0;
     border-radius:  5px;
     text-transform: uppercase;
     margin: 0.94rem 0 1.3rem;
-    background-color: #0f0f10;
+    position: relative;
+    left: 0px;
     
 }
+
+/* toggle in label designing and position */
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 29px;
+    background-color: #91a3b0;
+    border-radius: 30px;
+    border: 1px solid #6e8091;
+    left: 300px;
+    bottom: -40px;
+}
+
+/* After slide changes */
+.toggle:after {
+    content: '';
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: #4290c4;
+    top: 2px;
+    left: 2px;
+    transition: 0.5s;
+    
+}
+
+
+/* Checkbox checked effect */
+.checkbox:checked+.toggle::after {
+    
+    left: calc(100% - 1px);
+    transform: translateX(-100%);
+}
+
+/* Checkbox checked toggle label bg color */
+.checkbox:checked+.toggle {
+    background-color: #2e5894;
+}
+
+/* Checkbox vanished */
+.checkbox {
+    display: none;
+}
+
+
