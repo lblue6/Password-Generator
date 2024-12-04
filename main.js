@@ -5,6 +5,8 @@ passwordInput = document.querySelector(".input-box input"),
 passIndicator = document.querySelector(".pass-indicator"),
 generateBtn = document.querySelector(".generate-btn");
 
+
+
 const characters = { // obj of letters, numbers & symbols
     lowercase: "abcdefghijklmnopqrstuvwxyz",
     uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -51,7 +53,7 @@ const generatePassword = ()=> {
 }
 
 const updatePassIndicator = ()=> {
-    //if lenghtSlider value is less than 8 then pass weak as passIndicator id else if lenghtSlider
+    //if lengthSlider value is less than 8 then pass weak as passIndicator id else if lengthSlider
     // value is less than 16 then pass "medium" as id else pass "strong"as id
     passIndicator.id = lengthSlider.value <= 8 ? "weak" : lengthSlider.value <= 16 ? "medium" : "strong";
 }
@@ -59,19 +61,29 @@ const updatePassIndicator = ()=> {
 const updateSlider = () => {
     //passing slider value as counter text
     document.querySelector(".pass-length span").innerText = lengthSlider.value;
-    generatePassword(); 
+
     updatePassIndicator();   
 }
- updateSlider();   
+updateSlider();   
 
- const copyPassword = () => {
+const copyPassword = () => {
     navigator.clipboard.writeText(passwordInput.value); // copying random password
     copyIcon.innerText = "check"; // changing copy icon to tick
     setTimeout(() => { // after 1500 ms, changing tick icon back to copy
         copyIcon.innerText = "copy_all";
     }, 1500);
- }
+}
+
+
 
 copyIcon.addEventListener("click", copyPassword);
 lengthSlider.addEventListener("input",updateSlider);
 generateBtn.addEventListener("click", generatePassword);
+
+//button Sound 
+
+function sound(){
+    var snd = new Audio('click.mp3')//wav is also supported
+    snd.play()//plays the sound
+}
+
